@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "spectrum_analyser.h": "c",
+        "stdio.h": "c",
+        "adc.h": "c",
+        "oscilloscope.h": "c",
+        "awg.h": "c",
+        "stdlib.h": "c",
+        "dma.h": "c",
+        "settings.h": "c"
+    }
+}
