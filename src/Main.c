@@ -10,6 +10,8 @@
 #include "Communication.h"
 #include "Main.h"
 
+#define DEBUG 1
+
 void Init(){
   //if(!stdio_usb_init()){Error_Handler(USB_INIT);}
 
@@ -26,23 +28,33 @@ void Print_Logo(){
   printf("V%s\n\r",VERSION);
 }
 
+void Handle_In_Data();
+
 int main() {
-    Init();
-    sleep_ms(1000);
-    Print_Logo();
+  Init();
+  sleep_ms(1000);
+  Print_Logo();
 
-    while(true) {
-
-      Serial_in_Handler_Async();
-      if(Ready_DataIn()){
-      char* a = Get_DataIn();
-      printf("%s\n",a);
-      }
-      }
-    return 0;
+  while(true) {
+   Handle_In_Data();
+  }
+  return 0;
 }
 
+void Handle_In_Data(){
+  Serial_in_Handler_Async();
 
+  if(!DataIn_IsReady()){return;}
+
+  if(!Decode_Packet(DataIn_Get())){
+    //TODO Throw Error
+    printf("Decode Error!\n");
+    DataIn_Clear();
+    DataIn_ClearReady();
+    return;
+  }
+  Debug_OSC();
+}
 
 
 
