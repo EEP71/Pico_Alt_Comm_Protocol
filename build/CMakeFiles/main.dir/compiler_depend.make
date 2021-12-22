@@ -2994,54 +2994,28 @@ CMakeFiles\main.dir\src\ADC.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_dma\
 CMakeFiles\main.dir\src\ADC.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\dma.h
 CMakeFiles\main.dir\src\ADC.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dma.h
 CMakeFiles\main.dir\src\ADC.c.obj: ..\src\ADC.h
-CMakeFiles\main.dir\src\ADC.c.obj: ..\src\Analyzer.h
-CMakeFiles\main.dir\src\ADC.c.obj: ..\src\Globals.h
-CMakeFiles\main.dir\src\ADC.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdlib.h"
-CMakeFiles\main.dir\src\ADC.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\stdlib.h"
-CMakeFiles\main.dir\src\ADC.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\alloca.h"
 CMakeFiles\main.dir\src\ADC.c.obj: ..\src\Globals.h
 
 
 CMakeFiles\main.dir\src\AWG.c.obj: ..\src\AWG.c
-CMakeFiles\main.dir\src\AWG.c.obj: ..\src\AWG.h
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdio.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\newlib.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_newlib_version.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\config.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\ieeefp.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\features.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\cdefs.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_default_types.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stddef.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdarg.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\reent.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_types.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_types.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\lock.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\types.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_stdint.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\endian.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_endian.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\select.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_sigset.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timeval.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\timespec.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timespec.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_pthreadtypes.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\sched.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\types.h"
-CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\stdio.h"
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\common\pico_stdlib\include\pico\stdlib.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\types.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\assert.h
 CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdbool.h"
 CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\assert.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\newlib.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_newlib_version.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\config.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\ieeefp.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\features.h"
 CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdint.h"
 CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdint.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_default_types.h"
 CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_intsup.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_stdint.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stddef.h"
 CMakeFiles\main.dir\src\AWG.c.obj: generated\pico_base\pico\version.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\config.h
 CMakeFiles\main.dir\src\AWG.c.obj: generated\pico_base\pico\config_autogen.h
@@ -3049,6 +3023,7 @@ CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\boards\include\boards\pi
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\cdefs.h"
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\types.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\error.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_stdio\include\pico\stdio.h
@@ -3069,48 +3044,48 @@ CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
 CMakeFiles\main.dir\src\AWG.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_stdio_usb\include\pico\stdio_usb.h
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdio.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdarg.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\reent.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_types.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_types.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\lock.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\types.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\endian.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_endian.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\select.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_sigset.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timeval.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\timespec.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timespec.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_pthreadtypes.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\sched.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\types.h"
+CMakeFiles\main.dir\src\AWG.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\stdio.h"
+CMakeFiles\main.dir\src\AWG.c.obj: ..\src\AWG.h
+CMakeFiles\main.dir\src\AWG.c.obj: ..\src\Globals.h
 
 
 CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\Analyzer.c
-CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\Globals.h
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdio.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\newlib.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_newlib_version.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\config.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\ieeefp.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\features.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\cdefs.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_default_types.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stddef.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdarg.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\reent.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_types.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_types.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\lock.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\types.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_stdint.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\endian.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_endian.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\select.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_sigset.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timeval.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\timespec.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timespec.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_pthreadtypes.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\sched.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\types.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\stdio.h"
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\common\pico_stdlib\include\pico\stdlib.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\types.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\assert.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdbool.h"
 CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\assert.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\newlib.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_newlib_version.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\config.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\ieeefp.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\features.h"
 CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdint.h"
 CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdint.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_default_types.h"
 CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_intsup.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_stdint.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stddef.h"
 CMakeFiles\main.dir\src\Analyzer.c.obj: generated\pico_base\pico\version.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\config.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: generated\pico_base\pico\config_autogen.h
@@ -3118,6 +3093,7 @@ CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\boards\include\boar
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\cdefs.h"
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\types.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\error.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_stdio\include\pico\stdio.h
@@ -3138,19 +3114,32 @@ CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_str
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_stdio_usb\include\pico\stdio_usb.h
-CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\Analyzer.h
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdio.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdarg.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\reent.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_types.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_types.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\lock.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\types.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\endian.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_endian.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\select.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_sigset.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timeval.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\timespec.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timespec.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_pthreadtypes.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\sched.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\types.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\stdio.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\ADC.h
+CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_dma\include\hardware\dma.h
+CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\dma.h
+CMakeFiles\main.dir\src\Analyzer.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dma.h
 CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\Globals.h
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdlib.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\stdlib.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\alloca.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\kiss_fft\kiss_fftr.h
-CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\kiss_fft\kiss_fft.h
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\math.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\string.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_locale.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\strings.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\string.h"
-CMakeFiles\main.dir\src\Analyzer.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\inttypes.h"
+CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\Analyzer.h
+CMakeFiles\main.dir\src\Analyzer.c.obj: ..\src\Communication.h
 
 
 CMakeFiles\main.dir\src\Communication.c.obj: ..\src\Communication.c
@@ -3220,6 +3209,11 @@ CMakeFiles\main.dir\src\Communication.c.obj: "C:\Program Files (x86)\GNU Arm Emb
 CMakeFiles\main.dir\src\Communication.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\types.h"
 CMakeFiles\main.dir\src\Communication.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\stdio.h"
 CMakeFiles\main.dir\src\Communication.c.obj: ..\src\Communication.h
+CMakeFiles\main.dir\src\Communication.c.obj: ..\src\Globals.h
+CMakeFiles\main.dir\src\Communication.c.obj: ..\src\Scope.h
+CMakeFiles\main.dir\src\Communication.c.obj: ..\src\Analyzer.h
+CMakeFiles\main.dir\src\Communication.c.obj: ..\src\AWG.h
+CMakeFiles\main.dir\src\Communication.c.obj: ..\src\LIA.h
 
 
 CMakeFiles\main.dir\src\DAC.c.obj: ..\src\DAC.c
@@ -3295,7 +3289,77 @@ CMakeFiles\main.dir\src\Error.c.obj: ..\src\Error.h
 
 
 CMakeFiles\main.dir\src\LIA.c.obj: ..\src\LIA.c
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\common\pico_stdlib\include\pico\stdlib.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\types.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\assert.h
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdbool.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\assert.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\newlib.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_newlib_version.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\config.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\ieeefp.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\features.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdint.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdint.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_default_types.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_intsup.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_stdint.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stddef.h"
+CMakeFiles\main.dir\src\LIA.c.obj: generated\pico_base\pico\version.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\config.h
+CMakeFiles\main.dir\src\LIA.c.obj: generated\pico_base\pico\config_autogen.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\boards\include\boards\pico.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\cdefs.h"
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\types.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\common\pico_base\include\pico\error.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_stdio\include\pico\stdio.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\common\pico_time\include\pico\time.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_timer\include\hardware\timer.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\timer.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\timer.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\sio.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\interp.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\padsbank0.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_bank0.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_uart\include\hardware\uart.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\uart.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_stdio_usb\include\pico\stdio_usb.h
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdio.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdarg.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\reent.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_types.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_types.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\lock.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\types.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\endian.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\_endian.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\select.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_sigset.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timeval.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\timespec.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_timespec.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\_pthreadtypes.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\sched.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\types.h"
+CMakeFiles\main.dir\src\LIA.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\sys\stdio.h"
+CMakeFiles\main.dir\src\LIA.c.obj: ..\src\ADC.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_dma\include\hardware\dma.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\dma.h
+CMakeFiles\main.dir\src\LIA.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dma.h
 CMakeFiles\main.dir\src\LIA.c.obj: ..\src\LIA.h
+CMakeFiles\main.dir\src\LIA.c.obj: ..\src\Globals.h
 
 
 CMakeFiles\main.dir\src\Main.c.obj: ..\src\Main.c
@@ -3364,12 +3428,29 @@ CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs
 CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h
 CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
 CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_stdio_usb\include\pico\stdio_usb.h
-CMakeFiles\main.dir\src\Main.c.obj: ..\src\Communication.h
+CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_vreg\include\hardware\vreg.h
+CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\vreg_and_chip_reset.h
+CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\vreg_and_chip_reset.h
 CMakeFiles\main.dir\src\Main.c.obj: ..\src\Main.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\Communication.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\Settings.h
+CMakeFiles\main.dir\src\Main.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdlib.h"
+CMakeFiles\main.dir\src\Main.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\machine\stdlib.h"
+CMakeFiles\main.dir\src\Main.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\alloca.h"
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\Error.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\Globals.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\DAC.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\ADC.h
+CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_dma\include\hardware\dma.h
+CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\dma.h
+CMakeFiles\main.dir\src\Main.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dma.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\LIA.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\AWG.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\Scope.h
+CMakeFiles\main.dir\src\Main.c.obj: ..\src\Analyzer.h
 
 
 CMakeFiles\main.dir\src\Scope.c.obj: ..\src\Scope.c
-CMakeFiles\main.dir\src\Scope.c.obj: ..\src\Scope.h
 CMakeFiles\main.dir\src\Scope.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\stdio.h"
 CMakeFiles\main.dir\src\Scope.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\_ansi.h"
 CMakeFiles\main.dir\src\Scope.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\arm-none-eabi\include\newlib.h"
@@ -3435,6 +3516,12 @@ CMakeFiles\main.dir\src\Scope.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_struct
 CMakeFiles\main.dir\src\Scope.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h
 CMakeFiles\main.dir\src\Scope.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
 CMakeFiles\main.dir\src\Scope.c.obj: C:\Pico\pico-sdk\src\rp2_common\pico_stdio_usb\include\pico\stdio_usb.h
+CMakeFiles\main.dir\src\Scope.c.obj: ..\src\ADC.h
+CMakeFiles\main.dir\src\Scope.c.obj: C:\Pico\pico-sdk\src\rp2_common\hardware_dma\include\hardware\dma.h
+CMakeFiles\main.dir\src\Scope.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\dma.h
+CMakeFiles\main.dir\src\Scope.c.obj: C:\Pico\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dma.h
+CMakeFiles\main.dir\src\Scope.c.obj: ..\src\Scope.h
+CMakeFiles\main.dir\src\Scope.c.obj: ..\src\Globals.h
 
 
 CMakeFiles\main.dir\src\Settings.c.obj: ..\src\Settings.c
@@ -3988,11 +4075,11 @@ C:\Pico\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c:
 
 ..\src\Analyzer.c:
 
-..\src\kiss_fft\kiss_fftr.h:
-
-..\src\kiss_fft\kiss_fft.h:
-
 ..\src\Communication.h:
+
+..\src\Scope.h:
+
+..\src\LIA.h:
 
 ..\src\DAC.c:
 
@@ -4002,14 +4089,12 @@ C:\Pico\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c:
 
 ..\src\LIA.c:
 
-..\src\LIA.h:
-
 ..\src\Main.c:
 
 ..\src\Main.h:
 
-..\src\Scope.c:
-
-..\src\Scope.h:
-
 ..\src\Settings.h:
+
+..\src\DAC.h:
+
+..\src\Scope.c:

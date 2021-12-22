@@ -1342,9 +1342,9 @@ CMakeFiles\kiss_fft.dir\clean:
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
+CMakeFiles\main.dir\all: CMakeFiles\kiss_fft.dir\all
 CMakeFiles\main.dir\all: CMakeFiles\kiss_fftr.dir\all
 CMakeFiles\main.dir\all: CMakeFiles\ELF2UF2Build.dir\all
-CMakeFiles\main.dir\all: CMakeFiles\kiss_fft.dir\all
 CMakeFiles\main.dir\all: pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_padded_checksummed_asm.dir\all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\build

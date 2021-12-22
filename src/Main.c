@@ -1,23 +1,37 @@
+#define VERSION "0.03 - Fast"
+#define GET_DEVICE_ID (uint8_t)DataIn_Get()[0]
 
-// #include "spectrum_analyser.h"
-// #include "adc.h"
-// #include "oscilloscope.h"
-// #include "AWG.h"
-// #include "settings.h"
-#define VERSION "0.01"
 #include <stdio.h>
 #include <pico/stdlib.h>
-#include "Communication.h"
+#include <hardware/vreg.h>
 #include "Main.h"
+#include "Communication.h"
+#include "Settings.h"
+#include "Error.h"
+#include "Globals.h"
 
-#define DEBUG 1
+
+#include "DAC.h"
+#include "ADC.h"
+
+#include "LIA.h"
+#include "AWG.h"
+#include "Scope.h"
+#include "Analyzer.h"
+
+void OC(){
+  vreg_set_voltage(0b1110); //1.25v VCore
+  set_sys_clock_khz(290400,true); //290.4mhz Core Clock
+}
 
 void Init(){
   //if(!stdio_usb_init()){Error_Handler(USB_INIT);}
-
+  OC();
   stdio_usb_init();
+
+  //adc_init();
+
   //init_dma();
-  //init_adc();
   //init_spectrum_analyser();
   //init_oscilloscope();
   //init_AWG();
@@ -25,36 +39,48 @@ void Init(){
 
 void Print_Logo(){
   printf("%s\n\r",Logo);
-  printf("V%s\n\r",VERSION);
+  printf("V%s\n",VERSION);
 }
-
-void Handle_In_Data();
 
 int main() {
   Init();
   sleep_ms(1000);
   Print_Logo();
 
-  while(true) {
-   Handle_In_Data();
+  while(1){
+    Handle_Data_In();
   }
   return 0;
 }
 
-void Handle_In_Data(){
-  Serial_in_Handler_Async();
+void Handle_Data_In(){
+  if(!DataIn_IsReady()){Serial_in_Handler_Async(); return;}
 
-  if(!DataIn_IsReady()){return;}
+  uint8_t Temp = Packet_Decode();
 
-  if(!Decode_Packet(DataIn_Get())){
-    //TODO Throw Error
-    printf("Decode Error!\n");
+  if(Temp == (RESPONSE_OK)){
+    Serial_Response(GET_DEVICE_ID,RESPONSE_OK);
+    DataIn_Clear();
+    DataIn_ClearReady();
+    return;
+    }
+
+  if(Temp == (RESPONSE_FAIL))
+    Serial_Response(GET_DEVICE_ID,RESPONSE_FAIL);
     DataIn_Clear();
     DataIn_ClearReady();
     return;
   }
-  Debug_OSC();
+
+void Task_Add(void* func){
+
 }
 
+void Task_Remove(void* func){
 
+}
+
+void RunTasks(){
+
+}
 

@@ -70,9 +70,4 @@ CMakeFiles\main.dir\src\ADC.c.obj: C\:\Pico\pico\src\ADC.c \
  C\:\Pico\pico-sdk\src\rp2_common\hardware_dma\include/hardware/dma.h \
  C\:\Pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/dma.h \
  C\:\Pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dma.h \
- C\:\Pico\pico\src\ADC.h C\:\Pico\pico\src\Analyzer.h \
- C\:\Pico\pico\src\globals.h \
- c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\stdlib.h \
- c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\machine\stdlib.h \
- c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\alloca.h \
- C\:\Pico\pico\src\Globals.h
+ C\:\Pico\pico\src\ADC.h C\:\Pico\pico\src\Globals.h

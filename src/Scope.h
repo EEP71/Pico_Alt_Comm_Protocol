@@ -1,12 +1,12 @@
-#ifndef OSCILLOSCOPE_H
-#define OSCILLOSCOPE_H
+#ifndef SCOPE_H
+#define SCOPE_H
 
-
-void init_oscilloscope();
-void do_oscilloscope();
-void set_mSeconds_per_div();
-void trigger();
-void direction();
-void print_voltage_array();
+void OSC_Start();
+void OSC_Stop();
+void OSC_Reset();
+void OSC_Init();
+void OSC_Main();
+void OSC_Configure();
+void OSC_Debug_Conf();
 
 #endif

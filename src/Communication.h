@@ -4,20 +4,17 @@
 void Serial_in_Handler_Async();
 void Serial_in_Handler();
 
-void Serial_out_Handler_Async();
-void Serial_out_Handler();
-
 char* DataIn_Get();
-void DataIn_Clear();
+bool  DataIn_IsReady();
+void  DataIn_Clear();
+void  DataIn_ClearReady();
 
-void Debug_OSC();
 bool Packet_Check();
+uint8_t Packet_Decode();
 
-bool Decode_Packet(char* Dat);
-
-bool DataIn_IsReady();
-
-bool DataIn_ClearReady();
-
+void Serial_Out_32(uint8_t Device,uint8_t Channel, uint32_t Data);
+void Serial_Out_16(uint8_t Device, uint8_t Channel, uint16_t Data);
+void Serial_Out_8(uint8_t Device, uint8_t Channel, uint8_t Data);
+void Serial_Response(uint8_t Device, uint8_t Code);
 
 #endif

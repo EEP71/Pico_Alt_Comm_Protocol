@@ -64,4 +64,18 @@ CMakeFiles\main.dir\src\Main.c.obj: C\:\Pico\pico\src\Main.c \
  C\:\Pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/uart.h \
  C\:\Pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dreq.h \
  C\:\Pico\pico-sdk\src\rp2_common\pico_stdio_usb\include/pico/stdio_usb.h \
- C\:\Pico\pico\src\Communication.h C\:\Pico\pico\src\Main.h
+ C\:\Pico\pico-sdk\src\rp2_common\hardware_vreg\include/hardware/vreg.h \
+ C\:\Pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/vreg_and_chip_reset.h \
+ C\:\Pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/vreg_and_chip_reset.h \
+ C\:\Pico\pico\src\Main.h C\:\Pico\pico\src\Communication.h \
+ C\:\Pico\pico\src\Settings.h \
+ c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\stdlib.h \
+ c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\machine\stdlib.h \
+ c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\alloca.h \
+ C\:\Pico\pico\src\Error.h C\:\Pico\pico\src\Globals.h \
+ C\:\Pico\pico\src\DAC.h C\:\Pico\pico\src\ADC.h \
+ C\:\Pico\pico-sdk\src\rp2_common\hardware_dma\include/hardware/dma.h \
+ C\:\Pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/dma.h \
+ C\:\Pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dma.h \
+ C\:\Pico\pico\src\LIA.h C\:\Pico\pico\src\AWG.h \
+ C\:\Pico\pico\src\Scope.h C\:\Pico\pico\src\Analyzer.h

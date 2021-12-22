@@ -1,5 +1,4 @@
 CMakeFiles\main.dir\src\Scope.c.obj: C\:\Pico\pico\src\Scope.c \
- C\:\Pico\pico\src\Scope.h \
  c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\stdio.h \
  c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\_ansi.h \
  c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\newlib.h \
@@ -64,4 +63,9 @@ CMakeFiles\main.dir\src\Scope.c.obj: C\:\Pico\pico\src\Scope.c \
  C\:\Pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/uart.h \
  C\:\Pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/uart.h \
  C\:\Pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dreq.h \
- C\:\Pico\pico-sdk\src\rp2_common\pico_stdio_usb\include/pico/stdio_usb.h
+ C\:\Pico\pico-sdk\src\rp2_common\pico_stdio_usb\include/pico/stdio_usb.h \
+ C\:\Pico\pico\src\ADC.h \
+ C\:\Pico\pico-sdk\src\rp2_common\hardware_dma\include/hardware/dma.h \
+ C\:\Pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/dma.h \
+ C\:\Pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dma.h \
+ C\:\Pico\pico\src\Scope.h C\:\Pico\pico\src\Globals.h

@@ -1,130 +1,28 @@
 #include <pico/stdlib.h>
 #include <stdio.h>
 #include "Communication.h"
+#include "Globals.h"
+#include "Scope.h"
+#include "Analyzer.h"
+#include "AWG.h"
+#include "LIA.h"
+
 
 #define SERIAL_IN_PACKET_SIZE_BYTES (uint8_t)32
 #define PACKET_VALID_MAGIC_NUM (uint16_t)0x7FFF
 
-#define DEV_ID_BYTE 0
-#define DEV_OPTION_BYTE 1
-
-//Expected Values's For Data[0]
-#define NUM_OF_DEVICES 7
-#define NUM_OF_OPTIONS 4
-
-#define SYS_ID 0
-#define DAC_ID 1
-#define ADC_ID 2
-#define AWG_ID 3
-#define OSC_ID 4
-#define SA_ID 5
-#define LIA_ID 6
-
-#define CONF 0
-#define START 1
-#define STOP 2
-#define RESET 3
-
-//Expected Values's For Data[1]
-#define DEV_CONF 0
-#define DEV_START 1
-#define DEV_STOP 2
-#define DEV_Reset 3
-
-uint8_t Data[32];
-uint8_t Target;
-uint8_t Option;
-bool Ready;
 
 
-
-//SA Needs 8 Bytes
-
-float SA_SampleRate = 0;
-uint16_t SA_CaptureDepth = 0;
-uint8_t SA_Amplification = 0;
-uint8_t SA_ActiveChannels = 0;
-
-//AWG Needs 9 Bytes
-
-uint32_t AWG_Frequency = 0;
-uint16_t AWG_PeakToPeak = 0;
-uint8_t AWG_WaveType = 0;
-uint8_t AWG_ActiveChannels = 0;
-uint8_t AWG_Amplification = 0;
-
-//SA Needs 8 Bytes
-
-uint16_t OSC_mSecPerDiv = 0;
-uint16_t OSC_mVoltPerDiv = 0;
-uint16_t OSC_Trigger = 0;
-uint8_t OSC_Direction = 0;
-uint8_t OSC_Amplification = 0;
-
-//LIA Stub needs 20 Bytes
-
-uint32_t LOI_Stub1 = 0;
-uint32_t LOI_Stub2 = 0;
-uint32_t LOI_Stub3 = 0;
-uint32_t LOI_Stub4 = 0;
-uint32_t LOI_Stub5 = 0;
+uint8_t TestArray[4096];
 
 
-//AWG Func
+uint8_t Data_In[SERIAL_IN_PACKET_SIZE_BYTES];
+uint8_t Dev_Target;
+uint8_t Dev_Option;
+bool Data_In_Ready;
 
-void AWG_Start(){
-  printf("AWG_START!\n");
-}
-
-void AWG_Stop(){
-  printf("AWG_STOP!\n");
-}
-
-void AWG_Reset(){
-  printf("AWG_RESET!\n");
-}
-
-//SA Func
-
-void SA_Start(){
-  printf("SA_START!\n");
-}
-
-void SA_Stop(){
-  printf("SA_STOP!\n");
-}
-
-void SA_Reset(){
-  printf("SA_RESET!\n");
-}
-
-//OSC Func
-
-void OSC_Start(){
-   printf("OSC_START!\n");
-}
-
-void OSC_Stop(){
-   printf("OSC_STOP!\n");
-}
-
-void OSC_Reset(){
-   printf("OSC_RESET!\n");
-}
-
-//OSC Func
-
-void LIA_Start(){
-   printf("LIA_START!\n");
-}
-
-void LIA_Stop(){
-   printf("LIA_STOP!\n");
-}
-
-void LIA_Reset(){
-   printf("LIA_RESET!\n");
-}
+//!We need stdio_get_until(); But that func. is not exposed to us. getchar_timeout_us(); Wraps this function with a useles timeout feature.
+//!This can be fixed by adding the function to a header but that requires modifying the SDK, For compatibility reasons its best to avoid doing that.
 
 /* Serial Data Spec.
  * [0] Peripheral ID - Can Refer to Specific HW or SW Components
@@ -133,10 +31,12 @@ void LIA_Reset(){
  * [30-31] - Padding, Signifies End Of transaction Must be 0x7FFF. (Also used as a cheap way to verity packet validity)
  */ 
 
-//We need stdio_get_until(); But that func. is not exposed to us. getchar_timeout_us(); Wraps this function with a useles timeout feature.
-//This can be fixed by adding the function to a header but that requires modifying the SDK, For compatibility reasons its best to avoid doing that.
-
-//Will Read 1 Byte From Serial Buffer Each Time its called if we have recieved 24 bytes Check if the magic number exists and if it does Set the ready flag.
+/*
+ * Reads 1 byte from the serial buffer on each call.
+ * If enough bytes have been read (As defined by SERIAL_IN_PACKET_SIZE_BYTES)
+ * the ready flag will be set and the data can be read with DataIn_Get();
+ * If the data is not ready or the packet verification has failed a nullptr is returned.
+*/
 void  Serial_in_Handler_Async(){
 
   static uint8_t Bytes_Read;  
@@ -144,18 +44,18 @@ void  Serial_in_Handler_Async(){
 
   if (Temp == PICO_ERROR_TIMEOUT) {return;}
 
-  Data[Bytes_Read++] = Temp;
+  Data_In[Bytes_Read++] = Temp;
   
   if (Bytes_Read == SERIAL_IN_PACKET_SIZE_BYTES){
-    //Check last 2 bytes for Required Value
-
+    
     Bytes_Read = 0;
 
+    //Check last 2 bytes for Required Value
     if (Packet_Check()){
-     Ready = true;
+     Data_In_Ready = true;
      return;
     }
-    Ready = false;
+    Data_In_Ready = false;
   }
 }
 
@@ -166,19 +66,19 @@ void Serial_in_Handler(){
   for(uint8_t Bytes_recieved = 0; Bytes_recieved < (SERIAL_IN_PACKET_SIZE_BYTES); Bytes_recieved++){
     int16_t Temp = getchar_timeout_us(0);
     if (Temp == PICO_ERROR_TIMEOUT) {return;}
-    Data[Bytes_recieved] = (uint8_t)Temp;
+    Data_In[Bytes_recieved] = (uint8_t)Temp;
 }
   if (Packet_Check()){
-    Ready = true;
+    Data_In_Ready = true;
     return;
   }
-  Ready = false;
+  Data_In_Ready = false;
 }
 
 //Checks the last 2 bytes of our buffer for the magic number 0x7FFF
 bool Packet_Check(){
  
-  if (PACKET_VALID_MAGIC_NUM == ((Data[SERIAL_IN_PACKET_SIZE_BYTES-2] << 8) | Data[SERIAL_IN_PACKET_SIZE_BYTES-1])){
+  if (PACKET_VALID_MAGIC_NUM == ((Data_In[SERIAL_IN_PACKET_SIZE_BYTES-2] << 8) | Data_In[SERIAL_IN_PACKET_SIZE_BYTES-1])){
     return true;
   }
   printf("Packet Error\n");
@@ -188,148 +88,204 @@ bool Packet_Check(){
 //Returns The Pointer To Our Data array. If the data is not ready a nullptr is returned.
 //If the data is ready
 char* DataIn_Get(){
-  if(!Ready){return NULL;}
-  return Data;
+  if(!Data_In_Ready){return NULL;}
+  Data_In_Ready = false;
+  return Data_In;
 }
 
 //Clear Data and set the ready flag to false
 void DataIn_Clear(){
   for(uint8_t i = 0; i <= SERIAL_IN_PACKET_SIZE_BYTES-1; i++){
-    Data[i] = (uint8_t)0;
+    Data_In[i] = (uint8_t)0;
   }
-  Ready = false;
+  Data_In_Ready = false;
 }
-
 
 bool DataIn_IsReady(){
-  return Ready;
+  return Data_In_Ready;
 }
 
-bool DataIn_ClearReady(){
-  Ready = false;
+void DataIn_ClearReady(){
+  Data_In_Ready = false;
 }
 
-bool Decode_Packet(char* Dat){
 
-  if(Dat[DEV_ID_BYTE] > NUM_OF_DEVICES){
-    //TODO Throw Decode Error Device
+/* 
+ * Decodes an incoming data packet.
+ * Based on the contents of said packet an action is taken.
+ * The only checks that take place are for a valid device ID
+ * and option byte, no integrity check for the data itself is done.
+ * This will have to be done by the peripheral itself.
+ * Returns false if the 1st two bytes are invallid otherwise a true is returned.
+ */ 
+uint8_t Packet_Decode(){
+
+  if(Data_In[DEV_ID_BYTE] > NUM_OF_DEVICES){
     return false;
     }
-  if(Dat[DEV_OPTION_BYTE] > NUM_OF_OPTIONS){
-    //TODO Throw Decode Error Device
+  if(Data_In[DEV_OPTION_BYTE] > NUM_OF_OPTIONS){
     return false;
     }
 
-  switch (Dat[DEV_OPTION_BYTE]){
+  switch (Data_In[DEV_OPTION_BYTE]){
     //Check Option First
-    case CONF:{
+    case DEV_CONF:{
 
-      switch (Dat[DEV_ID_BYTE]){
-
+      switch (Data_In[DEV_ID_BYTE]){
         case SYS_ID:{break;}
-
         case DAC_ID:{break;}
-
         case ADC_ID:{break;}
 
         case AWG_ID:{
-          AWG_Frequency = (Dat[2] << 24) | (Dat[3] << 16) | (Dat[4] << 8) | Dat[5];
-          AWG_PeakToPeak = (Dat[6] << 8) | Dat[7];
-          AWG_WaveType = Dat[8];
-          AWG_ActiveChannels = Dat[9];
-          AWG_Amplification = Dat[10];
+          AWG_FrequencyCh1 =    (Data_In[2] << 24) | (Data_In[3] << 16) | (Data_In[4] << 8) | Data_In[5];
+          AWG_FrequencyCh2 =    (Data_In[6] << 24) | (Data_In[7] << 16) | (Data_In[8] << 8) | Data_In[9];
+          AWG_PeakToPeakCh1 =   (Data_In[10] << 8) | Data_In[11];
+          AWG_PeakToPeakCh2 =   (Data_In[12] << 8) | Data_In[13];
+          AWG_WaveTypeCh1 =      Data_In[14];
+          AWG_WaveTypeCh2 =      Data_In[15];
+          AWG_AmplificationCh1 = Data_In[16];
+          AWG_AmplificationCh2 = Data_In[17];
+          AWG_ActiveChannels =   Data_In[18];
+          AWG_Configure();
+          return RESPONSE_CONFIG_OK;
           break;
         }
 
         case OSC_ID:{
-          OSC_mSecPerDiv = (Dat[2] << 8) | Dat[3];
-          OSC_mVoltPerDiv = (Dat[4] << 8) | Dat[5];
-          OSC_Trigger = (Dat[6] << 8) | Dat[7];
-          OSC_Direction = Dat[8];
-          OSC_Amplification = Dat[9];
+          OSC_mSecPerDivCh1 =   (Data_In[2] << 8)  | Data_In[3];
+          OSC_mSecPerDivCh2 =   (Data_In[4] << 8)  | Data_In[5];
+          OSC_mVoltPerDivCh1 =  (Data_In[6] << 8)  | Data_In[7];
+          OSC_mVoltPerDivCh2 =  (Data_In[8] << 8)  | Data_In[9];
+          OSC_TriggerCh1 =      (Data_In[10] << 8) | Data_In[11];
+          OSC_TriggerCh2 =      (Data_In[12] << 8) | Data_In[13];
+          OSC_DirectionCh1 =     Data_In[14];
+          OSC_DirectionCh2 =     Data_In[15];
+          OSC_AmplificationCh1 = Data_In[16];
+          OSC_AmplificationCh2 = Data_In[17];
+          OSC_Configure();
+
           break;
         }
         
         case SA_ID:{
-          SA_SampleRate = (Dat[2] << 24) | (Dat[3] << 16) | (Dat[4] << 8) | Dat[5];
-          SA_CaptureDepth = (Dat[6] << 8) | Dat[7];
-          SA_Amplification = Dat[8];
-          SA_ActiveChannels = Dat[9];
+          SA_SampleRateCh1 =   (Data_In[2] << 24) | (Data_In[3] << 16) | (Data_In[4] << 8) | Data_In[5];
+          SA_SampleRateCh2 =   (Data_In[6] << 24) | (Data_In[7] << 16) | (Data_In[8] << 8) | Data_In[9];
+          SA_CaptureDepthCh1 = (Data_In[10] << 8) | Data_In[11];
+          SA_CaptureDepthCh2 = (Data_In[12] << 8) | Data_In[13];
+          SA_AmplificationCh1 = Data_In[14];
+          SA_AmplificationCh2 = Data_In[15];
+          SA_ActiveChannels =   Data_In[16];
+          SA_Configure();
+
           break;
         }
         
         case LIA_ID:{
-          LOI_Stub1 = (Dat[2] << 24) | (Dat[3] << 16) | (Dat[4] << 8) | Dat[5];
-          LOI_Stub2 = (Dat[6] << 24) | (Dat[7] << 16) | (Dat[8] << 8) | Dat[9];
-          LOI_Stub3 = (Dat[10] << 24) | (Dat[11] << 16) | (Dat[12] << 8) | Dat[13];
-          LOI_Stub4 = (Dat[14] << 24) | (Dat[15] << 16) | (Dat[16] << 8) | Dat[17];
-          LOI_Stub5 = (Dat[18] << 24) | (Dat[19] << 16) | (Dat[20] << 8) | Dat[21];
+          LOI_Stub1 = (Data_In[2] << 24)  | (Data_In[3] << 16)  | (Data_In[4] << 8)  | Data_In[5];
+          LOI_Stub2 = (Data_In[6] << 24)  | (Data_In[7] << 16)  | (Data_In[8] << 8)  | Data_In[9];
+          LOI_Stub3 = (Data_In[10] << 24) | (Data_In[11] << 16) | (Data_In[12] << 8) | Data_In[13];
+          LOI_Stub4 = (Data_In[14] << 24) | (Data_In[15] << 16) | (Data_In[16] << 8) | Data_In[17];
+          LOI_Stub5 = (Data_In[18] << 24) | (Data_In[19] << 16) | (Data_In[20] << 8) | Data_In[21];
+          LIA_Configure();
+
           break;
         }
+        default:{return RESPONSE_CONFIG_FAIL;}
+        return RESPONSE_CONFIG_OK;
       }
       break;
     }
 
-    case START:{
-      switch (Dat[DEV_ID_BYTE]){
-
+    case DEV_START:{
+      switch (Data_In[DEV_ID_BYTE]){
         case AWG_ID:{AWG_Start(); break;}
-
         case OSC_ID:{OSC_Start(); break;}
-        
-        case SA_ID:{SA_Start(); break;}
-        
+        case SA_ID: {SA_Start();  break;}
         case LIA_ID:{LIA_Start(); break;}
       }
+      return RESPONSE_START_OK;
       break;
     }
 
-    case STOP:{
-       switch (Dat[DEV_ID_BYTE]){
-
+    case DEV_STOP:{
+       switch (Data_In[DEV_ID_BYTE]){
         case AWG_ID:{AWG_Stop(); break;}
-
         case OSC_ID:{OSC_Stop(); break;}
-        
-        case SA_ID:{SA_Stop(); break;}
-        
+        case SA_ID: {SA_Stop();  break;}
         case LIA_ID:{LIA_Stop(); break;}
       }
+      return RESPONSE_STOP_OK;
       break;
     }
 
-    case RESET:{
-
-      switch (Dat[DEV_ID_BYTE]){
-
+    case DEV_RESET:{
+      switch (Data_In[DEV_ID_BYTE]){
         case AWG_ID:{AWG_Reset(); break;}
-
         case OSC_ID:{OSC_Reset(); break;}
-        
-        case SA_ID:{SA_Reset(); break;}
-        
+        case SA_ID: {SA_Reset();  break;}
         case LIA_ID:{LIA_Reset(); break;} 
       }
+      return RESPONSE_RESET_OK;
       break;
     }
+    default:{return RESPONSE_OPTION_FAIL;}
   }
  return true;
 }
 
-void Debug_OSC(){
-  printf("-- OSC Config Data -- \n\r mSec/Div: %d \n\r mVolt/Div: %d \n\r Trigger: %d \n\r Direction: %d \n\r Amplification: %d \n\r",OSC_mSecPerDiv,OSC_mVoltPerDiv,OSC_Trigger,OSC_Direction,OSC_Amplification);
-  Ready = false;
-  DataIn_Clear();
+/*
+* -- Serial Out -- 
+* Consists of 4 functions:
+* * Data Packets of 4 to 1 Bytes
+* * Status Code
+* Every transfer comes with a single byte denoting its type.
+* The 2 MSB Bits define one of the 4 possible functions with:
+* * 00/000000 - Response
+* * 01/000000 - 1 Byte
+* * 10/000000 - 2 Bytes
+* * 11/000000 - 4 Bytes
+* The 1st 3 LSB Bits define the source of the data which 
+* folows the same structure as the Device ID's Defined in Globals.h
+* Namely:
+* * 00000/000 - System
+* * 00000/001 - DAC HW
+* * 00000/010 - ADC HW
+* * 00000/011 - AWG SW
+* * 00000/100 - OSC SW
+* * 00000/101 - SA SW
+* * 00000/110 - LIA
+* * 00000/111 - (Unused)
+* The 4th Bit defines the channel source of the 4 DSP components
+* With:
+* * 0000/0/000 - Channel 1
+* * 0000/1/000 - Channel 2
+* The 5th and 6th bits are unused.
+* Example: 11001100 = 32bit data from the Osciloscope on channel 2
+*/
+void Serial_Out_32(uint8_t Device,uint8_t Channel, uint32_t Data){
+  uint8_t Temp = (0b11 << 6) + (Channel << 3) + Device;
+  putchar_raw(Temp);
+  putchar_raw((uint8_t)(Data >> 24) & 0xFF);
+  putchar_raw((uint8_t)(Data >> 16) & 0xFF);
+  putchar_raw((uint8_t)(Data >> 8) & 0xFF);
+  putchar_raw((uint8_t) Data & 0xFF);
 }
 
-void Debug_AWG(){
-  
+void Serial_Out_16(uint8_t Device, uint8_t Channel, uint16_t Data){
+  uint8_t Temp = (0b10 << 6) + (Channel << 3) + Device;
+  putchar_raw(Temp);
+  putchar_raw((uint8_t)(Data >> 8) & 0xFF);
+  putchar_raw((uint8_t) Data & 0xFF);
 }
 
-void Debug_LIA(){
-  
+void Serial_Out_8(uint8_t Device, uint8_t Channel, uint8_t Data){
+  uint8_t Temp = (0b01 << 6) + (Channel << 3) + Device;
+  putchar_raw(Temp);
+  putchar_raw((uint8_t) Data & 0xFF);
 }
 
-void Debug_SA(){
-  
+void Serial_Response(uint8_t Device, uint8_t Code){
+  uint8_t Temp = (0b00 << 6) + Device;
+  putchar_raw(Temp);
+  putchar_raw(Code);
 }

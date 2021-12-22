@@ -1,35 +1,43 @@
+#include <pico/stdlib.h>
+#include <stdio.h>
 #include "AWG.h"
+#include "Globals.h"
 
-void init_AWG(){
-    printf("init_AWG\n");
-    sleep_ms(10);
+void AWG_Start(){
+    printf("AWG Started!\n");
 }
-void do_AWG(){
-    printf("AWG\n");
-    sleep_ms(10);
+
+void AWG_Stop(){
+    printf("AWG Stoped!\n");
 }
-void set_wave_type(){
-    printf("set_wave_type\n");
-    sleep_ms(10);
+
+void AWG_Reset(){
+    printf("AWG Settings Reset!\n");
 }
-void set_frequency(){
-    printf("set_frequency\n");
-    sleep_ms(10);
+
+void AWG_Init(){
+    printf("AWG Init!\n\r");
 }
-void set_channel(){
-    printf("set_channel\n");
-    sleep_ms(10);
+void AWG_Main(){
+    //Where All of the action happens
+    printf("AWG Main Loop!\n\r");
+    sleep_ms(100);
 }
-void set_peak_2_peak(){
-    printf("set_peak_2_peak\n");
-    sleep_ms(10);
+
+void AWG_Configure(){
+    printf("AWG Reconfigure!\n\r");
 }
-void set_offset(){
-    printf("set_offset\n");
-    sleep_ms(10);
-}
-void set_amplification(){
-    printf("set_amplification\n");
-    sleep_ms(10);
+
+void AWG_Debug_Conf(){
+  printf("-- AWG Config Data -- \n\r %d \n\r %d \n\r %d \n\r %d \n\r %d \n\r %d \n\r %d \n\r %d \n\r %d \n\r"
+  ,AWG_FrequencyCh1
+  ,AWG_FrequencyCh2
+  ,AWG_PeakToPeakCh1
+  ,AWG_PeakToPeakCh2
+  ,AWG_WaveTypeCh1
+  ,AWG_WaveTypeCh2
+  ,AWG_AmplificationCh1
+  ,AWG_AmplificationCh1
+  ,AWG_ActiveChannels);
 }
 

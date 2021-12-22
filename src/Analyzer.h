@@ -1,18 +1,12 @@
-#ifndef SPECTRUM_ANALYSER_H
-#define SPECTRUM_ANALYSER_H
+#ifndef ANALYZER_H
+#define ANALYZER_H
 
-#include <stdio.h>
-#include "pico/stdlib.h"
-#include "globals.h"
-#include "stdlib.h"
+void SA_Start();
+void SA_Stop();
+void SA_Reset();
+void SA_Init();
+void SA_Main();
+void SA_Configure();
+void SA_Debug_Conf();
 
-
-#define BASE_CLOCK 48000000
-
-void fft();
-void print_fft_values();
-void calculate_freq_per_bin();
-float calculate_sample_rate();
-void init_spectrum_analyser();
-void update_fft_alloc();
 #endif

@@ -65,4 +65,6 @@ CMakeFiles\main.dir\src\Communication.c.obj: \
  c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\sys\sched.h \
  c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\machine\types.h \
  c\:\progra~2\gnuarm~1\102020~1\arm-none-eabi\include\sys\stdio.h \
- C\:\Pico\pico\src\Communication.h
+ C\:\Pico\pico\src\Communication.h C\:\Pico\pico\src\Globals.h \
+ C\:\Pico\pico\src\Scope.h C\:\Pico\pico\src\Analyzer.h \
+ C\:\Pico\pico\src\AWG.h C\:\Pico\pico\src\LIA.h

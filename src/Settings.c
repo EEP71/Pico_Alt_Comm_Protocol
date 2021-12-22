@@ -1,9 +1,5 @@
 #include "settings.h"
 
-
-
-
-
 int convert_to_int(){
     char buf[100];
     int converted_to_int = 0;
