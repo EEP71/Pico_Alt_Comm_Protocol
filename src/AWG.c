@@ -4,28 +4,28 @@
 #include "Globals.h"
 
 void AWG_Start(){
-    printf("AWG Started!\n");
+    //printf("AWG Started!\n");
 }
 
 void AWG_Stop(){
-    printf("AWG Stoped!\n");
+    //printf("AWG Stoped!\n");
 }
 
 void AWG_Reset(){
-    printf("AWG Settings Reset!\n");
+    //printf("AWG Settings Reset!\n");
 }
 
 void AWG_Init(){
-    printf("AWG Init!\n\r");
+    //printf("AWG Init!\n\r");
 }
 void AWG_Main(){
     //Where All of the action happens
-    printf("AWG Main Loop!\n\r");
-    sleep_ms(100);
+    //printf("AWG Main Loop!\n\r");
+    //sleep_ms(100);
 }
 
 void AWG_Configure(){
-    printf("AWG Reconfigure!\n\r");
+    //printf("AWG Reconfigure!\n\r");
 }
 
 void AWG_Debug_Conf(){

@@ -18,10 +18,10 @@
 #include "AWG.h"
 #include "Scope.h"
 #include "Analyzer.h"
-
+//Uart throughput is 500k bytes in ~5s so 100kByte/sec
 void OC(){
-  vreg_set_voltage(0b1110); //1.25v VCore
-  set_sys_clock_khz(290400,true); //290.4mhz Core Clock
+  vreg_set_voltage(0b1111); //1.25v VCore
+  set_sys_clock_khz(192000,true); //192.0mhz Core Clock
 }
 
 void Init(){
@@ -58,15 +58,15 @@ void Handle_Data_In(){
 
   uint8_t Temp = Packet_Decode();
 
-  if(Temp == (RESPONSE_OK)){
-    Serial_Response(GET_DEVICE_ID,RESPONSE_OK);
+  if(Temp >= 127){
+    Serial_Response(GET_DEVICE_ID,Temp);
     DataIn_Clear();
     DataIn_ClearReady();
     return;
     }
 
-  if(Temp == (RESPONSE_FAIL))
-    Serial_Response(GET_DEVICE_ID,RESPONSE_FAIL);
+  if(Temp <= 127 || !Temp)
+    Serial_Response(GET_DEVICE_ID,Temp);
     DataIn_Clear();
     DataIn_ClearReady();
     return;

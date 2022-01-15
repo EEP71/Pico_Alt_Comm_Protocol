@@ -5,28 +5,28 @@
 #include "Globals.h"
 
 void OSC_Start(){
-    printf("OSC Started!\n");
+    //printf("OSC Started!\n");
 }
 
 void OSC_Stop(){
-    printf("OSC Stoped!\n");
+    //printf("OSC Stoped!\n");
 }
 
 void OSC_Reset(){
-    printf("OSC Settings Reset!\n");
+    //printf("OSC Settings Reset!\n");
 }
 
 void OSC_Init(){
-    printf("OSC Init!\n\r");
+    //printf("OSC Init!\n\r");
 }
 void OSC_Main(){
     //Where All of the action happens
-    printf("OSC Main Loop!\n\r");
-    sleep_ms(100);
+    //printf("OSC Main Loop!\n\r");
+    //sleep_ms(100);
 }
 
 void OSC_Configure(){
-    printf("OSC Reconfigure!\n\r");
+    //printf("OSC Reconfigure!\n\r");
 }
 
 void OSC_Debug_Conf(){

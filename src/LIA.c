@@ -7,28 +7,28 @@
 //TODO Hassan Lock-In-Amplifier Code
 
 void LIA_Start(){
-    printf("LIA Started!\n");
+    //printf("LIA Started!\n");
 }
 
 void LIA_Stop(){
-    printf("LIA Stoped!\n");
+    //printf("LIA Stoped!\n");
 }
 
 void LIA_Reset(){
-    printf("LIA Settings Reset!\n");
+    //printf("LIA Settings Reset!\n");
 }
 
 void LIA_Init(){
-    printf("LIA Init!\n\r");
+    //printf("LIA Init!\n\r");
 }
 void LIA_Main(){
     //Where All of the action happens
-    printf("LIA Main Loop!\n\r");
-    sleep_ms(100);
+    //printf("LIA Main Loop!\n\r");
+    //sleep_ms(100);
 }
 
 void LIA_Configure(){
-    printf("LIA Reconfigure!\n\r");
+    //printf("LIA Reconfigure!\n\r");
 }
 
 void LIA_Debug_Conf(){

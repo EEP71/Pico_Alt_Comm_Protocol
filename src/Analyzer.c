@@ -12,25 +12,25 @@ void SA_Start(){
 }
 
 void SA_Stop(){
-    printf("SA Stoped!\n");
+    //printf("SA Stoped!\n");
 }
-
+ 
 void SA_Reset(){
-    printf("SA Settings Reset!\n");
+    //printf("SA Settings Reset!\n");
 }
 
 void SA_Init(){
-    printf("SA Init!\n\r");
+    //printf("SA Init!\n\r");
 }
 
 void SA_Main(){
     //Where All of the action happens
-    printf("SA Main Loop!\n\r");
-    sleep_ms(100);
+    //printf("SA Main Loop!\n\r");
+    //sleep_ms(100);
 }
 
 void SA_Configure(){
-    printf("SA Reconfigure!\n\r");
+    //printf("SA Reconfigure!\n\r");
 }
 
 void SA_Debug_Conf(){
@@ -48,7 +48,9 @@ void SA_Debug_Conf(){
 void SA_TestDataOutput(){
     while(1){
     static uint32_t Test;
+    static uint32_t Test2 = 10000;
     Serial_Out_32(SA_ID,0, Test++);
-    sleep_ms(100);
+    Serial_Out_32(SA_ID,1, Test2+= 16);
+    //sleep_ms(50);
     }
 }

@@ -146,6 +146,7 @@ uint8_t Packet_Decode(){
           AWG_AmplificationCh1 = Data_In[16];
           AWG_AmplificationCh2 = Data_In[17];
           AWG_ActiveChannels =   Data_In[18];
+          
           AWG_Configure();
           return RESPONSE_CONFIG_OK;
           break;
@@ -163,7 +164,7 @@ uint8_t Packet_Decode(){
           OSC_AmplificationCh1 = Data_In[16];
           OSC_AmplificationCh2 = Data_In[17];
           OSC_Configure();
-
+          return RESPONSE_CONFIG_OK;
           break;
         }
         
@@ -176,7 +177,7 @@ uint8_t Packet_Decode(){
           SA_AmplificationCh2 = Data_In[15];
           SA_ActiveChannels =   Data_In[16];
           SA_Configure();
-
+          return RESPONSE_CONFIG_OK;
           break;
         }
         
@@ -187,7 +188,7 @@ uint8_t Packet_Decode(){
           LOI_Stub4 = (Data_In[14] << 24) | (Data_In[15] << 16) | (Data_In[16] << 8) | Data_In[17];
           LOI_Stub5 = (Data_In[18] << 24) | (Data_In[19] << 16) | (Data_In[20] << 8) | Data_In[21];
           LIA_Configure();
-
+          return RESPONSE_CONFIG_OK;
           break;
         }
         default:{return RESPONSE_CONFIG_FAIL;}
@@ -230,7 +231,7 @@ uint8_t Packet_Decode(){
     }
     default:{return RESPONSE_OPTION_FAIL;}
   }
- return true;
+ return false;
 }
 
 /*
